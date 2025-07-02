@@ -1,7 +1,7 @@
 import musicbrainzngs
 import musicbrainzngs.musicbrainz
 from config import APPNAME, CONTACT
-import requests
+import subprocess
 
 print("Agent Load")
 
@@ -28,7 +28,7 @@ def find_by_song(title):
     if str.strip(title) == '':
         print("bad")
         return None
-    result = musicbrainzngs.search_releases(str.strip(title),limit=1) # type="group", country="GB"
+    result = musicbrainzngs.search_releases(str.strip(title),limit=7) # type="group", country="GB"
     for release in result['release-list']:
         artistList = []
         for obj in release['artist-credit']:
@@ -54,7 +54,12 @@ def get_cover(mbid):
         return "{{ url_for('static', filename='placeholder_cover.png') }}"
     return x['images'][0]['thumbnails']['small']
 
+def apply_metadata():
+    print(musicbrainzngs.search_recordings(query="炉心融解"))
+
 if __name__ == "__main__":
     print("loaded")
+    
+    apply_metadata()
 
 
