@@ -51,7 +51,7 @@ def get_cover(mbid):
     try:
         x = musicbrainzngs.get_image_list(mbid)
     except musicbrainzngs.musicbrainz.ResponseError:
-        return "/public/placeholder_cover.png"
+        return "{{ url_for('static', filename='placeholder_cover.png') }}"
     return x['images'][0]['thumbnails']['small']
 
 if __name__ == "__main__":
