@@ -1,0 +1,29 @@
+body {
+    color: red;
+}
+
+#dynamic-area {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.song-box {
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+    text-align: center;
+    padding: 10px;
+}
+
+.song-box h1, p {
+    margin: 0;
+}
+
+.cover-image {
+    width: 80%;
+    aspect-ratio: 1/1;
+    background-color: red;
+}

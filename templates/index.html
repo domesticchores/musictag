@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AK's Beets UI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Find Song</h1>
+    <form id="mainform" action="" onsubmit="return false;">
+        <input id="namebox" type="text" placeholder="Name?">
+        <input id="artistbox" type="text" placeholder="Artist?">
+        <input id="langbox" type="text" placeholder="Language?">
+        <button onclick="loadContent()">Load Releases</button>
+    </form>
+
+    <div id="dynamic-area">
+        <div id="template" class="song-box">
+            <img class="cover-image" id="cover" loading="lazy" src="/public/placeholder_cover.png">
+            <h1 id="title">{TITLE}</h1>
+            <p id="artist">{ARTIST}</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
