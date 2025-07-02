@@ -16,6 +16,12 @@ body {
     aspect-ratio: 1/1;
     text-align: center;
     padding: 10px;
+    transition: all 100ms linear;
+}
+
+.song-box:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .song-box h1, p {
