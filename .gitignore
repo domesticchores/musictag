@@ -209,5 +209,8 @@ __marimo__/
 # config
 config.py
 
-# tmp folder
+# folders / files
 tmp
+untagged-music
+tagged-music
+library.db
