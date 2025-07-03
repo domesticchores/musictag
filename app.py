@@ -22,5 +22,12 @@ def get_cover():
     print("content:",content)
     return jsonify({'content': content})
 
+@app.route('/get_local_songs')
+def get_local_songs():
+    content = main.get_local_songs()
+    print("content:",content)
+    return jsonify({'content': content})
+    
+
 if __name__ == '__main__':
     app.run(debug=True)

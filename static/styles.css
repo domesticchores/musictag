@@ -33,3 +33,7 @@ body {
     aspect-ratio: 1/1;
     background-color: red;
 }
+
+#local-song-select {
+    margin-bottom: 20px;
+}
