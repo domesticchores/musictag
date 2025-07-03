@@ -36,4 +36,11 @@ body {
 
 #local-song-select {
     margin-bottom: 20px;
+    min-width: 200px;
+}
+
+
+button {
+    height: 22px;
+    margin: 0;
 }

@@ -2,6 +2,8 @@ let namebox = document.getElementById("namebox")
 let artistbox = document.getElementById("artistbox")
 let langbox = document.getElementById("langbox")
 
+let localsongselect = document.getElementById('local-song-select')
+
 let song_template = document.getElementById("template").cloneNode(true)
 document.getElementById("template").remove()
 
@@ -53,6 +55,29 @@ function loadCover(obj, mbid) {
             console.log(response.content)
             let cover_url = response.content
             obj.childNodes[1].src = cover_url
+        },
+        error: function(error) {
+            console.error('Error fetching dynamic content:', error);
+        },
+        complete: function() {
+            // some stuff
+        }
+    });
+}
+
+function refreshLocalSongs() {
+    $.ajax({
+        url: '/get_local_songs',
+        type: 'GET',
+        success: function(response) {
+            localsongselect.innerHTML = ''
+            console.log(response.content)
+            for (obj in response.content) {
+                let option = document.createElement('option')
+                option.value = response.content[obj]
+                option.text = response.content[obj]
+                localsongselect.appendChild(option)
+            }
         },
         error: function(error) {
             console.error('Error fetching dynamic content:', error);
