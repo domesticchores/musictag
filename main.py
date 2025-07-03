@@ -2,6 +2,7 @@ import musicbrainzngs
 import musicbrainzngs.musicbrainz
 from config import APPNAME, CONTACT
 import subprocess
+import time
 
 print("Agent Load")
 
@@ -54,12 +55,17 @@ def get_cover(mbid):
         return "{{ url_for('static', filename='placeholder_cover.png') }}"
     return x['images'][0]['thumbnails']['small']
 
-def apply_metadata():
-    print(musicbrainzngs.search_recordings(query="炉心融解"))
+def apply_metadata(mbid):
+    # print(musicbrainzngs.search_recordings(query="炉心融解"))
+    process = subprocess.Popen(['beet','-l','./library.db','-d','./tagged-music','import','--search-id',mbid,'./tmp'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+    process.stdin.write('A')
+    while not process.stdout.readline():
+        time.sleep(0.1)
+    print(process.communicate()[0])
 
 if __name__ == "__main__":
     print("loaded")
     
-    apply_metadata()
+    apply_metadata('b0a8c935-c16e-42f4-ad8e-5d3497be63db')
 
 
