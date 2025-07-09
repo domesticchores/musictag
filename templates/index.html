@@ -11,11 +11,12 @@
     <div style="display: flex; gap: 10px;">
         <p>Current Song to Tag:</p>
         <select name="song" id="local-song-select">
-            <option value="songname">{SONG_NAME}</option>
+            <option value="songname">Select a song or click "Refresh"</option>
         </select>
         <button onclick="refreshLocalSongs()">Refresh</button>
     </div>
     
+    <!-- <input type="file" webkitdirectory directory multiple/> -->
 
     <form id="mainform" action="" onsubmit="return false;">
         <input id="namebox" type="text" placeholder="Name?">
@@ -25,8 +26,8 @@
     </form>
 
     <div id="dynamic-area">
-        <div id="template" class="song-box">
-            <img class="cover-image" id="cover" loading="lazy">
+        <div id="template" class="song-box" onclick="applyMetadata(this)">
+            <img class="cover-image" id="cover" loading="lazy" src="{{ url_for('static', filename='placeholder_cover.png') }}">
             <h1 id="title">{TITLE}</h1>
             <p id="artist">{ARTIST}</p>
         </div>

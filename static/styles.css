@@ -38,9 +38,26 @@ body {
     margin-bottom: 20px;
     min-width: 200px;
 }
-
-
 button {
     height: 22px;
     margin: 0;
+}
+
+#confirmation-screen {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    left:0;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#confirmation-box {
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    opacity: 1;
 }

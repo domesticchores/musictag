@@ -27,7 +27,14 @@ def get_local_songs():
     content = main.get_local_songs()
     print("content:",content)
     return jsonify({'content': content})
-    
+
+@app.route('/apply_metadata')
+def apply_metadata():
+    data = request.args.get('id')
+    songname = request.args.get('name')
+    content = main.final(data, songname)
+    print("content:",content)
+    return jsonify({'content': content})  
 
 if __name__ == '__main__':
     app.run(debug=True)

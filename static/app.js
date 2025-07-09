@@ -37,8 +37,8 @@ function loadContent() {
             document.getElementById("langbox").value = ''
         },
         error: function(error) {
-            document.getElementById("dynamic-area").innerHTML='Error fetching dynamic content:', error;
-            console.error('Error fetching dynamic content:', error);
+            document.getElementById("dynamic-area").innerHTML='Error connecting to MusicBrainz API:', error;
+            console.error('Error:', error);
         },
         complete: function() {
             // some stuff
@@ -80,7 +80,29 @@ function refreshLocalSongs() {
             }
         },
         error: function(error) {
-            console.error('Error fetching dynamic content:', error);
+            console.error('Error:', error);
+        },
+        complete: function() {
+            // some stuff
+        }
+    });
+}
+
+function applyMetadata(element) {
+    try {
+        element.getAttribute('mbid')
+    } catch {
+        console.log("Error on applying metadata")
+        return
+    }
+    $.ajax({
+        url: '/apply_metadata',
+        type: 'GET',
+        data: {id: element.getAttribute('mbid'), name: localsongselect.value},
+        success: function(response) {
+        },
+        error: function(error) {
+            console.error('Error:', error);
         },
         complete: function() {
             // some stuff

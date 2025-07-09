@@ -15,7 +15,7 @@ current_untagged_songs = []
 
 VALID_SONG_FORMATS = ['flac','mp3','aac','wav','aiff','alac','m4a','ogg','opus']
 
-MOCK_DATA = [{'id': 'e15f4b30-a034-4bea-bdd7-d1958278a1bf', 'ext:score': '100', 'title': 'Gnarly', 'status': 'Official', 'text-representation': {'language': 'eng', 'script': 'Latn'}, 'artist-credit': [{'name': 'Oatmeal', 'artist': {'id': 'bd841834-d1b0-494d-adb0-fc5f10979a06', 'name': 'Oatmeal', 'sort-name': 'Oatmeal'}}], 'release-group': {'id': 'f62634d5-21c4-4a71-b3d7-ce8b14bff1c6', 'type': 'Single', 'title': 'Gnarly', 'primary-type': 'Single'}, 'date': '2020-01-31', 'country': 'US', 'release-event-list': [{'date': '2020-01-31', 'area': {'id': '489ce91b-6658-3307-9877-795b68554c98', 'name': 'United States', 'sort-name': 'United States', 'iso-3166-1-code-list': ['US']}}], 'asin': 'B0844Q9NGX', 'medium-list': [{'format': 'Digital Media', 'disc-list': [], 'disc-count': 0, 'track-list': [], 'track-count': 1}], 'medium-track-count': 1, 'medium-count': 1, 'tag-list': [], 'artist-credit-phrase': 'Oatmeal'}, {'id': '37347c11-dd53-4d52-aade-078ddb7c32f3', 'ext:score': '100', 'title': 'Gnarly', 'status': 'Official', 'disambiguation': 'clean', 'packaging': 'None', 'text-representation': {'language': 'eng', 'script': 'Latn'}, 'artist-credit': [{'name': 'KATSEYE', 'artist': {'id': 'abbf7d85-9a7f-4a6c-80bd-bf71f2c7d520', 'name': 'KATSEYE', 'sort-name': 'KATSEYE'}}], 'release-group': {'id': '60e4cc5b-cf97-4dae-b0c1-d30adb8c11cc', 'type': 'Single', 'title': 'Gnarly', 'primary-type': 'Single'}, 'barcode': '00602478028991', 'label-info-list': [{'label': {'id': '5ab1234e-05c3-4260-8b00-a208224dd96b', 'name': 'HYBE × GEFFEN'}}], 'medium-list': [{'format': 'Digital Media', 'disc-list': [], 'disc-count': 0, 'track-list': [], 'track-count': 1}], 'medium-track-count': 1, 'medium-count': 1, 'tag-list': [], 'artist-credit-phrase': 'KATSEYE'}]
+MOCK_DATA = {'release-list': [{'id': 'e15f4b30-a034-4bea-bdd7-d1958278a1bf', 'ext:score': '100', 'title': 'Gnarly', 'status': 'Official', 'text-representation': {'language': 'eng', 'script': 'Latn'}, 'artist-credit': [{'name': 'Oatmeal', 'artist': {'id': 'bd841834-d1b0-494d-adb0-fc5f10979a06', 'name': 'Oatmeal', 'sort-name': 'Oatmeal'}}], 'release-group': {'id': 'f62634d5-21c4-4a71-b3d7-ce8b14bff1c6', 'type': 'Single', 'title': 'Gnarly', 'primary-type': 'Single'}, 'date': '2020-01-31', 'country': 'US', 'release-event-list': [{'date': '2020-01-31', 'area': {'id': '489ce91b-6658-3307-9877-795b68554c98', 'name': 'United States', 'sort-name': 'United States', 'iso-3166-1-code-list': ['US']}}], 'asin': 'B0844Q9NGX', 'medium-list': [{'format': 'Digital Media', 'disc-list': [], 'disc-count': 0, 'track-list': [], 'track-count': 1}], 'medium-track-count': 1, 'medium-count': 1, 'tag-list': [], 'artist-credit-phrase': 'Oatmeal'}, {'id': '37347c11-dd53-4d52-aade-078ddb7c32f3', 'ext:score': '100', 'title': 'Gnarly', 'status': 'Official', 'disambiguation': 'clean', 'packaging': 'None', 'text-representation': {'language': 'eng', 'script': 'Latn'}, 'artist-credit': [{'name': 'KATSEYE', 'artist': {'id': 'abbf7d85-9a7f-4a6c-80bd-bf71f2c7d520', 'name': 'KATSEYE', 'sort-name': 'KATSEYE'}}], 'release-group': {'id': '60e4cc5b-cf97-4dae-b0c1-d30adb8c11cc', 'type': 'Single', 'title': 'Gnarly', 'primary-type': 'Single'}, 'barcode': '00602478028991', 'label-info-list': [{'label': {'id': '5ab1234e-05c3-4260-8b00-a208224dd96b', 'name': 'HYBE × GEFFEN'}}], 'medium-list': [{'format': 'Digital Media', 'disc-list': [], 'disc-count': 0, 'track-list': [], 'track-count': 1}], 'medium-track-count': 1, 'medium-count': 1, 'tag-list': [], 'artist-credit-phrase': 'KATSEYE'}]}
 MOCK_IMAGE_DATA = {'images': [{'approved': True, 'back': False, 'comment': '', 'edit': 127293211, 'front': True, 'id': 42166269002, 'image': 'https://coverartarchive.org/release/37347c11-dd53-4d52-aade-078ddb7c32f3/42166269002.jpg', 'thumbnails': {'1200': 'https://coverartarchive.org/release/37347c11-dd53-4d52-aade-078ddb7c32f3/42166269002-1200.jpg', '250': 'https://coverartarchive.org/release/37347c11-dd53-4d52-aade-078ddb7c32f3/42166269002-250.jpg', '500': 'https://coverartarchive.org/release/37347c11-dd53-4d52-aade-078ddb7c32f3/42166269002-500.jpg', 'large': 'https://coverartarchive.org/release/37347c11-dd53-4d52-aade-078ddb7c32f3/42166269002-500.jpg', 'small': 'https://coverartarchive.org/release/37347c11-dd53-4d52-aade-078ddb7c32f3/42166269002-250.jpg'}, 'types': ['Front']}], 'release': 'https://musicbrainz.org/release/37347c11-dd53-4d52-aade-078ddb7c32f3'}
 musicbrainzngs.set_useragent(APPNAME,"1.0.0",CONTACT)
 
@@ -36,9 +36,13 @@ def find_by_song(title):
     fullList = []
     print("Looking for:", title)
     if str.strip(title) == '':
-        print("bad")
+        print("blank title")
         return None
-    result = musicbrainzngs.search_releases(str.strip(title),limit=7) # type="group", country="GB"
+    # TODO: handle errors on frontend
+    try:
+        result = musicbrainzngs.search_releases(str.strip(title),limit=7) # type="group", country="GB"
+    except musicbrainzngs.musicbrainz.NetworkError:
+        return None
     for release in result['release-list']:
         artistList = []
         for obj in release['artist-credit']:
@@ -61,18 +65,16 @@ def get_cover(mbid):
     try:
         x = musicbrainzngs.get_image_list(mbid)
     except musicbrainzngs.musicbrainz.ResponseError:
-        return "{{ url_for('static', filename='placeholder_cover.png') }}"
+        return "/static/placeholder_cover.png"
     return x['images'][0]['thumbnails']['small']
 
 def apply_metadata(mbid):
-    # print(musicbrainzngs.search_recordings(query="炉心融解"))
+    # TODO: Rewrite
     process = subprocess.Popen(['beet','-l','./library.db','-d','./tagged-music','import','--search-id',mbid,'./tmp'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
     process.stdin.write('A')
     while not process.stdout.readline():
         time.sleep(0.1)
     print(process.communicate()[0])
-
-
 
 def get_local_songs():
     print("refreshing current local songs...")
@@ -96,6 +98,21 @@ def move_current_song(file: Path):
         print(f"Error: Source file '{file}' not found.")
     except OSError as e:
         print(f"Error moving file: {e}")
+
+def final(mbid, songname):
+    print(mbid,songname)
+    filepath = Path(UNTAGGED_SONG_PATH.joinpath(songname))
+    if filepath.exists():
+        print("file exists. moving.")
+        move_current_song(filepath)
+
+        newpath = Path(TEMP_SONG_PATH.joinpath(songname))
+        while not newpath.exists():
+            time.sleep(1)
+        print("file found. converting.")
+        apply_metadata(mbid)
+
+    return None
 
 if __name__ == "__main__":
     print("loaded")
